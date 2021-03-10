@@ -1109,3 +1109,58 @@ System memory in use after: 88.9 MB.
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2375.
 Total: 3.225400 ms (FindLiveObjects: 0.375400 ms CreateObjectMapping: 0.149000 ms MarkObjects: 2.608700 ms  DeleteObjects: 0.090700 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 496.920677 seconds.
+  path: Assets/Sprites/Glitchy Mouse.png
+  artifactKey: Guid(6a55cfae27ce3224c9e3b67c9264a562) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Glitchy Mouse.png using Guid(6a55cfae27ce3224c9e3b67c9264a562) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffac392bf2da81cec8764113674ee1f9') in 0.063615 seconds
+  Import took 0.068665 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001068 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.175 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1783 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.9 MB.
+System memory in use after: 89.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2378.
+Total: 4.207900 ms (FindLiveObjects: 0.549300 ms CreateObjectMapping: 0.268800 ms MarkObjects: 3.366700 ms  DeleteObjects: 0.021300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001872 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.867 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1783 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.9 MB.
+System memory in use after: 89.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2381.
+Total: 4.696100 ms (FindLiveObjects: 0.885600 ms CreateObjectMapping: 0.240700 ms MarkObjects: 3.528700 ms  DeleteObjects: 0.037300 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
