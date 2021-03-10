@@ -26,6 +26,7 @@ public class CookieManager : MonoBehaviour
     private int noOfBakers = 0;
     //cookiemonster
     private int costToMonster = 25000;
+    private bool monster = true;
 
 
     public Button upgradeButton;
@@ -80,11 +81,11 @@ public class CookieManager : MonoBehaviour
 
         if (cookies >= costToMonster)
         {
-            monsterButton.image.color = green;
+            monsterButton.image.color = blue;
         }
         else
         {
-            monsterButton.image.color = blue;
+            monsterButton.image.color = gray;
         }
         #endregion
 
@@ -94,9 +95,10 @@ public class CookieManager : MonoBehaviour
             bakerButton.gameObject.SetActive(true);
         }
 
-        if (cookies >= 2000)
+        if (cookies >= 2000 && monster == true)
         {
             monsterButton.gameObject.SetActive(true);
+            monster = false;
         }
         #endregion
     }
@@ -198,11 +200,11 @@ public class CookieManager : MonoBehaviour
     #region Bakers
     public void AddBaker()
     {
-        if (cookies >= costToBake)                       //Checks if player can afford helper
+        if (cookies >= costToBake)                       //Checks if player can afford baker
         {
             cookies -= costToBake;                      //Takes cost from cookies
             UpdateCookieText();
-            InvokeRepeating("Bakers", 1.0f, 1.0f);      //Starting in 1 second 2 cookies will be added every one second
+            InvokeRepeating("Bakers", 1.0f, 1.0f);      //Starting in 1 second 5 cookies will be added every one second
             if (costToBake == 1000)                     //After first buy increase to 500, from then on add 500 to cost
             {
                 costToBake = costToBake * 5;
@@ -213,29 +215,41 @@ public class CookieManager : MonoBehaviour
             }
             UpdateBakerText();
 
-            noOfBakers++;                          //Add a helper
+            noOfBakers++;                          //Add a baker
             UpdateNoOfBakersText();
         }
     }
 
-    public void Bakers()                           //Adds cookies per helper
+    public void Bakers()                           //Adds cookies per baker
     {
         cookies += cookiesPerBaker;
         UpdateCookieText();
     }
 
-    private void UpdateBakerText()                 //Updates cost of helpers text
+    private void UpdateBakerText()                 //Updates cost of bakers text
     {
         bakerText.text = "Baker Cost: " + costToBake;
     }
 
-    private void UpdateNoOfBakersText()            //Updates number of helpers text
+    private void UpdateNoOfBakersText()            //Updates number of bakers text
     {
         noOfBakersText.text = "Bakers: " + noOfBakers;
     }
     #endregion
 
     #region Cookie Monster
+    public void AddCookieMonster()
+    {
+        if (cookies >= costToMonster)
+        {
+            cookies -= costToMonster;                      //Takes cost from cookies
+            UpdateCookieText();
 
+            cookiesPerClick = 1000;
+            cookiesPerHelper = 100;
+            cookiesPerBaker = 500;
+            monsterButton.gameObject.SetActive(false);
+        }
+    }
     #endregion
 }
