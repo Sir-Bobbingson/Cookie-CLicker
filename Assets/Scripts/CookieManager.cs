@@ -8,15 +8,34 @@ public class CookieManager : MonoBehaviour
     [SerializeField] private int cookies = 0;
     [SerializeField] private int cookiesPerClick = 1;
     [SerializeField] private int cookiesPerHelper = 1;
+    [SerializeField] private int cookiesPerBaker = 5;
     [SerializeField] private Text cookieText;
     [SerializeField] private Text upgradeText;
     [SerializeField] private Text helperText;
     [SerializeField] private Text noOfHelpersText;
+    [SerializeField] private Text bakerText;
+    [SerializeField] private Text noOfBakersText;
 
     //upgrades
     private int costToUpgrade = 5;
+    //helpers
     private int costToBuy = 100;
     private int noOfHelpers = 0;
+    //bakers
+    private int costToBake = 1000;
+    private int noOfBakers = 0;
+    //cookiemonster
+    private int costToMonster = 25000;
+
+
+    public Button upgradeButton;
+    public Button helperButton;
+    public Button bakerButton;
+    public Button monsterButton;
+
+    Color32 green = new Color32(0, 255, 109, 255);
+    Color32 gray = new Color32(146, 146, 146, 255);
+    Color32 blue = new Color32(0, 75, 255, 255);
 
 
     private void Start()
@@ -25,34 +44,73 @@ public class CookieManager : MonoBehaviour
         UpdateUpgradeText();
         UpdateHelperText();
         UpdateNoOfHelpersText();
+        UpdateBakerText();
+        UpdateNoOfBakersText();
     }
 
-    public void AddCookie()
+    private void Update()
+    {
+        #region Button Colour
+        if (cookies >= costToUpgrade)
+        {
+            upgradeButton.image.color = green;
+        }
+        else
+        {
+            upgradeButton.image.color = gray;
+        }
+
+        if (cookies >= costToBuy)
+        {
+            helperButton.image.color = green;
+        }
+        else
+        {
+            helperButton.image.color = gray;
+        }
+
+        if (cookies >= costToBake)
+        {
+            bakerButton.image.color = green;
+        }
+        else
+        {
+            bakerButton.image.color = gray;
+        }
+
+        if (cookies >= costToMonster)
+        {
+            monsterButton.image.color = green;
+        }
+        else
+        {
+            monsterButton.image.color = blue;
+        }
+        #endregion
+
+        #region Hidden Buttons
+        if (cookies >= 800)
+        {
+            bakerButton.gameObject.SetActive(true);
+        }
+
+        if (cookies >= 2000)
+        {
+            monsterButton.gameObject.SetActive(true);
+        }
+        #endregion
+    }
+
+
+    #region Cookies
+    public void AddCookie()                         //Adds cookies per click
     {
         cookies += cookiesPerClick;
         UpdateCookieText();
     }
 
-    public void Helpers()
-    {
-        cookies += cookiesPerHelper;
-        UpdateCookieText();
-    }
 
-    public void UpgradeCookiesPerClick()
-    {
-        if(cookies >= costToUpgrade)
-        {
-            cookies -= costToUpgrade;
-            cookiesPerClick++;
-            UpdateCookieText();
-            costToUpgrade = costToUpgrade * 2;
-            UpdateUpgradeText();
-        }
-            
-    }
-
-    private void UpdateCookieText()
+    private void UpdateCookieText()                 //Updates number of cookies
     {
         if (cookieText != null)
         {
@@ -75,30 +133,37 @@ public class CookieManager : MonoBehaviour
             Debug.Log("Cookie Text Not Set");
         }
     }
+    #endregion
 
-    private void UpdateUpgradeText()
+    #region Upgrade
+    public void UpgradeCookiesPerClick()
+    {
+        if (cookies >= costToUpgrade)                //Checks if player can afford upgrade
+        {
+            cookies -= costToUpgrade;               //Takes cost from cookies
+            cookiesPerClick++;                      //Increases cookies per click
+            UpdateCookieText();
+            costToUpgrade = costToUpgrade * 2;      //Increases cost of upgrade
+            UpdateUpgradeText();
+        }
+
+    }
+
+    private void UpdateUpgradeText()                //Updates cost of upgrade text
     {
         upgradeText.text = "Upgrade Cost: " + costToUpgrade;
     }
+    #endregion
 
-    private void UpdateHelperText()
-    {
-        helperText.text = "Helper Cost: " + costToBuy;
-    }
-
-    private void UpdateNoOfHelpersText()
-    {
-        noOfHelpersText.text = "Number Of Helpers: " + noOfHelpers;
-    }
-
+    #region Helpers
     public void AddHelper()
     {
-        if (cookies >= costToBuy)
+        if (cookies >= costToBuy)                   //Checks if player can afford helper
         {
-            cookies -= costToBuy;
+            cookies -= costToBuy;                   //Takes cost from cookies
             UpdateCookieText();
-            InvokeRepeating("Helpers", 1.0f, 1.0f);
-            if (costToBuy == 100) 
+            InvokeRepeating("Helpers", 1.0f, 1.0f); //Starting in 1 second a cookie will be added every one second
+            if (costToBuy == 100)                   //After first buy increase to 500, from then on add 500 to cost
             {
                 costToBuy = costToBuy * 5;
             }
@@ -108,9 +173,69 @@ public class CookieManager : MonoBehaviour
             }
             UpdateHelperText();
 
-            noOfHelpers++;
+            noOfHelpers++;                          //Add a helper
             UpdateNoOfHelpersText();
         }
     }
 
+    public void Helpers()                           //Adds cookies per helper
+    {
+        cookies += cookiesPerHelper;
+        UpdateCookieText();
+    }
+
+    private void UpdateHelperText()                 //Updates cost of helpers text
+    {
+        helperText.text = "Helper Cost: " + costToBuy;
+    }
+
+    private void UpdateNoOfHelpersText()            //Updates number of helpers text
+    {
+        noOfHelpersText.text = "Helpers: " + noOfHelpers;
+    }
+    #endregion
+
+    #region Bakers
+    public void AddBaker()
+    {
+        if (cookies >= costToBake)                       //Checks if player can afford helper
+        {
+            cookies -= costToBake;                      //Takes cost from cookies
+            UpdateCookieText();
+            InvokeRepeating("Bakers", 1.0f, 1.0f);      //Starting in 1 second 2 cookies will be added every one second
+            if (costToBake == 1000)                     //After first buy increase to 500, from then on add 500 to cost
+            {
+                costToBake = costToBake * 5;
+            }
+            else
+            {
+                costToBake = costToBake + 5000;
+            }
+            UpdateBakerText();
+
+            noOfBakers++;                          //Add a helper
+            UpdateNoOfBakersText();
+        }
+    }
+
+    public void Bakers()                           //Adds cookies per helper
+    {
+        cookies += cookiesPerBaker;
+        UpdateCookieText();
+    }
+
+    private void UpdateBakerText()                 //Updates cost of helpers text
+    {
+        bakerText.text = "Baker Cost: " + costToBake;
+    }
+
+    private void UpdateNoOfBakersText()            //Updates number of helpers text
+    {
+        noOfBakersText.text = "Bakers: " + noOfBakers;
+    }
+    #endregion
+
+    #region Cookie Monster
+
+    #endregion
 }
