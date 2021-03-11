@@ -27,12 +27,17 @@ public class CookieManager : MonoBehaviour
     //cookiemonster
     private int costToMonster = 25000;
     private bool monster = true;
+    private bool god = false;
+    //achivements
+    public int achievementCounter = 0;
 
 
     public Button upgradeButton;
     public Button helperButton;
     public Button bakerButton;
     public Button monsterButton;
+
+    public Image achievement11;
 
     Color32 green = new Color32(0, 255, 109, 255);
     Color32 gray = new Color32(146, 146, 146, 255);
@@ -99,6 +104,15 @@ public class CookieManager : MonoBehaviour
         {
             monsterButton.gameObject.SetActive(true);
             monster = false;
+        }
+        #endregion
+
+        #region Achievements
+        if (god == true)
+        {
+            achievement11.gameObject.SetActive(true);
+            achievementCounter++;
+            god = false
         }
         #endregion
     }
@@ -249,6 +263,7 @@ public class CookieManager : MonoBehaviour
             cookiesPerHelper = 100;
             cookiesPerBaker = 500;
             monsterButton.gameObject.SetActive(false);
+            god = true;
         }
     }
     #endregion

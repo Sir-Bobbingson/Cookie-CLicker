@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 18363.1379; Version 1909; 64bit' Language: 'en' Physical Memory: 8100 MB
+OS: 'Windows 10 Enterprise; OS build 18363.1316; Version 1909; 64bit' Language: 'en' Physical Memory: 16304 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -11,81 +11,198 @@ C:\Program Files\Unity\Hub\Editor\2020.2.2f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Jarrod/Desktop/GitHub/Cookie CLicker
+C:/Users/3c3a1af15fd4a15a/Documents/AI/Cookie-CLicker
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57281
-Successfully changed project path to: C:/Users/Jarrod/Desktop/GitHub/Cookie CLicker
-C:/Users/Jarrod/Desktop/GitHub/Cookie CLicker
+60099
+Successfully changed project path to: C:/Users/3c3a1af15fd4a15a/Documents/AI/Cookie-CLicker
+C:/Users/3c3a1af15fd4a15a/Documents/AI/Cookie-CLicker
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 44.51 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 35.58 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1 (068178b99f32)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Jarrod/Desktop/GitHub/Cookie CLicker/Assets
+[Subsystems] Discovering subsystems at path C:/Users/3c3a1af15fd4a15a/Documents/AI/Cookie-CLicker/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce 940MX (ID=0x134d)
+    Renderer: NVIDIA Quadro K2200  (ID=0x13ba)
     Vendor:   
-    VRAM:     2010 MB
-    Driver:   27.21.14.6079
+    VRAM:     4035 MB
+    Driver:   10.18.13.5362
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56800
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56396
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001968 seconds.
+Registered in 0.001359 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 46.43 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 37.70 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.479 seconds
+- Completed reload, in  0.987 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001240 seconds.
+Registered in 0.000955 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 49.39 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 34.66 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.098 seconds
+- Completed reload, in  0.905 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 84.3 MB.
+System memory in use before: 84.2 MB.
 System memory in use after: 84.3 MB.
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2241.
-Total: 2.838300 ms (FindLiveObjects: 0.260700 ms CreateObjectMapping: 0.070400 ms MarkObjects: 2.363500 ms  DeleteObjects: 0.142600 ms)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2240.
+Total: 2.064500 ms (FindLiveObjects: 0.187800 ms CreateObjectMapping: 0.070100 ms MarkObjects: 1.720700 ms  DeleteObjects: 0.084900 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Sprites/Cookie Monster.png
-  artifactKey: Guid(dd7cd9366099dd34ca180e2900021b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Cookie Monster.png using Guid(dd7cd9366099dd34ca180e2900021b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94204133c19284ff81d42b190b98f8ff') in 0.136544 seconds
-  Import took 0.140879 seconds .
+  path: Assets/Scenes
+  artifactKey: Guid(f8daa908be8274c47b3714b1ee16339c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(f8daa908be8274c47b3714b1ee16339c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1f6c7375b83cf11f7f6ef8d0e354e55') in 0.010120 seconds
+  Import took 0.013926 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 35.205973 seconds.
+  Time since last request: 0.000288 seconds.
+  path: Assets/Scenes/Test Run.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Test Run.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5f8071975a75816bce0d8a6a57ab5f6') in 0.015783 seconds
+  Import took 0.018733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.880941 seconds.
+  path: Assets/Sprites
+  artifactKey: Guid(6b3c65fbccaf5b148ad144a78b223a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites using Guid(6b3c65fbccaf5b148ad144a78b223a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ffd84af2fd1405dfacaae5e33e99329') in 0.007509 seconds
+  Import took 0.010300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.217824 seconds.
   path: Assets/Sprites/Cookie Monster.png
   artifactKey: Guid(dd7cd9366099dd34ca180e2900021b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Cookie Monster.png using Guid(dd7cd9366099dd34ca180e2900021b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14e887a472fd5a02d7ce932ea3bd0004') in 0.018984 seconds
-  Import took 0.024462 seconds .
+Start importing Assets/Sprites/Cookie Monster.png using Guid(dd7cd9366099dd34ca180e2900021b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2490b6fa1b5c89991ccf3d1dd205f8bd') in 0.118544 seconds
+  Import took 0.121536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 154.989534 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(6427e49b10cc1924da5a800362ea162d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(6427e49b10cc1924da5a800362ea162d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53ce06a30405400d68c0e765f2d18137') in 0.006518 seconds
+  Import took 0.010108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.817971 seconds.
+  path: Assets/Scripts/CookieManager.cs
+  artifactKey: Guid(c533910d3c80acb4e92a06f1e42fc65f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CookieManager.cs using Guid(c533910d3c80acb4e92a06f1e42fc65f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ca0023d14d6bf6f4ed1d5025a80e129') in 0.009943 seconds
+  Import took 0.012693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.025785 seconds.
+  path: Assets/Scripts/CookieManager.cs
+  artifactKey: Guid(c533910d3c80acb4e92a06f1e42fc65f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CookieManager.cs using Guid(c533910d3c80acb4e92a06f1e42fc65f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ca0023d14d6bf6f4ed1d5025a80e129') in 0.002581 seconds
+  Import took 0.005624 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000824 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.895 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1783 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.9 MB.
+System memory in use after: 87.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2249.
+Total: 1.844800 ms (FindLiveObjects: 0.165900 ms CreateObjectMapping: 0.060700 ms MarkObjects: 1.598100 ms  DeleteObjects: 0.019300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 265.593697 seconds.
+  path: Assets/Scripts/CookieManager.cs
+  artifactKey: Guid(c533910d3c80acb4e92a06f1e42fc65f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CookieManager.cs using Guid(c533910d3c80acb4e92a06f1e42fc65f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf34958e2cf25db9705b07cf5e740ac') in 0.005555 seconds
+  Import took 0.008427 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000790 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.812 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1783 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.0 MB.
+System memory in use after: 87.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2252.
+Total: 1.914400 ms (FindLiveObjects: 0.329300 ms CreateObjectMapping: 0.073900 ms MarkObjects: 1.480100 ms  DeleteObjects: 0.030100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000864 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.830 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1783 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.1 MB.
+System memory in use after: 87.2 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2255.
+Total: 2.250900 ms (FindLiveObjects: 0.187700 ms CreateObjectMapping: 0.057600 ms MarkObjects: 1.958800 ms  DeleteObjects: 0.046000 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
