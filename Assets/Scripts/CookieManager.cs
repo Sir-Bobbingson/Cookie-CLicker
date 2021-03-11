@@ -28,9 +28,33 @@ public class CookieManager : MonoBehaviour
     //cookiemonster
     private int costToMonster = 25000;
     private bool monster = true;
-    private bool monsterAchievement = false;
-    //achivements
+
+    #region Achivement Variables
     public int achievementCounter = 0;
+    private bool clickAchievement = false;
+    private bool clickerAchievement = false;
+    private bool clickMoreAchievement = false;
+    private bool clickEvenMoreAchievement = false;
+    private bool clickTheMostAchievement = false;
+    private bool upgradeAchievement = false;
+    private bool helperAchievement = false;
+    private bool bakerAchievement = false;
+    private bool monsterAchievement = false;
+    private bool getALifeAchievement = false;
+    #endregion
+
+    #region Achievement Images
+    public Image clickAch;
+    public Image clickerAch;
+    public Image clickMoreAch;
+    public Image clickEvenMoreAch;
+    public Image clickTheMostAch;
+    public Image upgradeAch;
+    public Image helperAch;
+    public Image bakerAch;
+    public Image monsterAch;
+    public Image getALifeAch;
+    #endregion
 
     #region Buttons
     public Button upgradeButton;
@@ -39,15 +63,11 @@ public class CookieManager : MonoBehaviour
     public Button monsterButton;
     #endregion
 
-    #region Achievement Images
-    public Image achievement11;
-    #endregion
-
-
+    #region Colours
     Color32 green = new Color32(0, 255, 109, 255);
     Color32 gray = new Color32(146, 146, 146, 255);
     Color32 blue = new Color32(0, 75, 255, 255);
-
+    #endregion
 
     private void Start()
     {
@@ -111,10 +131,6 @@ public class CookieManager : MonoBehaviour
             monster = false;
         }
         #endregion
-
-
-        
-
     }
 
 
@@ -142,11 +158,50 @@ public class CookieManager : MonoBehaviour
                     cookieText.text = cookies + " Cookies";
                     break;
             }
+            #region Achievements
+            if (cookies >= 1 && clickAchievement == false)
+            {
+                clickAch.gameObject.SetActive(true);
+                clickAchievement = true;
 
-        }
-        else
-        {
-            Debug.Log("Cookie Text Not Set");
+                UpdateAchievementText();
+            }
+
+            if (cookies >= 10 && clickerAchievement == false)
+            {
+                clickerAch.gameObject.SetActive(true);
+                clickerAchievement = true;
+                UpdateAchievementText();
+            }
+
+            if (cookies >= 100 && clickMoreAchievement == false)
+            {
+                clickMoreAch.gameObject.SetActive(true);
+                clickMoreAchievement = true;
+                UpdateAchievementText();
+            }
+
+            if (cookies >= 1000 && clickEvenMoreAchievement == false)
+            {
+                clickEvenMoreAch.gameObject.SetActive(true);
+                clickEvenMoreAchievement = true;
+                UpdateAchievementText();
+            }
+
+            if (cookies >= 10000 && clickTheMostAchievement == false)
+            {
+                clickTheMostAch.gameObject.SetActive(true);
+                clickTheMostAchievement = true;
+                UpdateAchievementText();
+            }
+
+            if (cookies >= 1000000 && getALifeAchievement == false)
+            {
+                getALifeAch.gameObject.SetActive(true);
+                getALifeAchievement = true;
+                UpdateAchievementText();
+            }
+            #endregion
         }
     }
     #endregion
@@ -161,6 +216,14 @@ public class CookieManager : MonoBehaviour
             UpdateCookieText();
             costToUpgrade = costToUpgrade * 2;      //Increases cost of upgrade
             UpdateUpgradeText();
+
+            if (upgradeAchievement == false)
+            {
+                upgradeAch.gameObject.SetActive(true);
+                upgradeAchievement = true;
+                
+                UpdateAchievementText();
+            }
         }
 
     }
@@ -191,6 +254,14 @@ public class CookieManager : MonoBehaviour
 
             noOfHelpers++;                          //Add a helper
             UpdateNoOfHelpersText();
+
+            if (helperAchievement == false)
+            {
+                helperAch.gameObject.SetActive(true);
+                helperAchievement = true;
+                
+                UpdateAchievementText();
+            }
         }
     }
 
@@ -231,6 +302,14 @@ public class CookieManager : MonoBehaviour
 
             noOfBakers++;                          //Add a baker
             UpdateNoOfBakersText();
+
+            if (bakerAchievement == false)
+            {
+                bakerAch.gameObject.SetActive(true);
+                bakerAchievement = true;
+                
+                UpdateAchievementText();
+            }
         }
     }
 
@@ -267,11 +346,18 @@ public class CookieManager : MonoBehaviour
 
             if (monsterAchievement == true)
             {
-                achievement11.gameObject.SetActive(true);
-                achievementCounter++;
+                monsterAch.gameObject.SetActive(true);
+                
                 monsterAchievement = false;
+                UpdateAchievementText();
             }
         }
     }
     #endregion
+
+    private void UpdateAchievementText()
+    {
+        achievementCounter++;
+        achievementText.text = "Achievements:  " + achievementCounter + "/10";
+    }
 }
