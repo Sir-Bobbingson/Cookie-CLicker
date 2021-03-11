@@ -15,6 +15,7 @@ public class CookieManager : MonoBehaviour
     [SerializeField] private Text noOfHelpersText;
     [SerializeField] private Text bakerText;
     [SerializeField] private Text noOfBakersText;
+    [SerializeField] private Text achievementText;
 
     //upgrades
     private int costToUpgrade = 5;
@@ -27,17 +28,21 @@ public class CookieManager : MonoBehaviour
     //cookiemonster
     private int costToMonster = 25000;
     private bool monster = true;
-    private bool god = false;
+    private bool monsterAchievement = false;
     //achivements
     public int achievementCounter = 0;
 
-
+    #region Buttons
     public Button upgradeButton;
     public Button helperButton;
     public Button bakerButton;
     public Button monsterButton;
+    #endregion
 
+    #region Achievement Images
     public Image achievement11;
+    #endregion
+
 
     Color32 green = new Color32(0, 255, 109, 255);
     Color32 gray = new Color32(146, 146, 146, 255);
@@ -107,14 +112,9 @@ public class CookieManager : MonoBehaviour
         }
         #endregion
 
-        #region Achievements
-        if (god == true)
-        {
-            achievement11.gameObject.SetActive(true);
-            achievementCounter++;
-            god = false
-        }
-        #endregion
+
+        
+
     }
 
 
@@ -263,7 +263,14 @@ public class CookieManager : MonoBehaviour
             cookiesPerHelper = 100;
             cookiesPerBaker = 500;
             monsterButton.gameObject.SetActive(false);
-            god = true;
+            monsterAchievement = true;
+
+            if (monsterAchievement == true)
+            {
+                achievement11.gameObject.SetActive(true);
+                achievementCounter++;
+                monsterAchievement = false;
+            }
         }
     }
     #endregion
