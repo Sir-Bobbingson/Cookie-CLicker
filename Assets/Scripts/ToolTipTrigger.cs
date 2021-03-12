@@ -11,7 +11,8 @@ public class ToolTipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     
     public void OnPointerEnter(PointerEventData eventData)
     {
-        ToolTipSystem.Show(content, header);           //calls on method from ToolTipSystem to activate tooltip
+        
+        StartCoroutine(Delay());
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -19,5 +20,9 @@ public class ToolTipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         ToolTipSystem.Hide();           //calls on method from ToolTipSystem to deactivate tooltip
     }
 
-
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        ToolTipSystem.Show(content, header);           //calls on method from ToolTipSystem to activate tooltip
+    }
 }
