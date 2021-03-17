@@ -7,22 +7,28 @@ public class ToolTipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 {
     public string header;
     public string content;
-    
+    public bool hover;
     
     public void OnPointerEnter(PointerEventData eventData)
     {
         
         StartCoroutine(Delay());
+        hover = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         ToolTipSystem.Hide();           //calls on method from ToolTipSystem to deactivate tooltip
+        hover = false;
     }
 
     IEnumerator Delay()
     {
         yield return new WaitForSeconds(0.5f);
-        ToolTipSystem.Show(content, header);           //calls on method from ToolTipSystem to activate tooltip
+        if (hover == true)
+        {
+            ToolTipSystem.Show(content, header);           //calls on method from ToolTipSystem to activate tooltip
+        }
+        
     }
 }

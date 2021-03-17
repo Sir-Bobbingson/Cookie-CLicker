@@ -338,7 +338,7 @@ public class CookieManager : MonoBehaviour
             cookies -= costToMonster;                      //Takes cost from cookies
             UpdateCookieText();
 
-            cookiesPerClick = 1000;
+            cookiesPerClick = cookiesPerClick += 1000;
             cookiesPerHelper = 100;
             cookiesPerBaker = 500;
             monsterButton.gameObject.SetActive(false);
